@@ -1,18 +1,22 @@
 /**
- * Job Radar tracker backend.
+ * Job Radar backend.
  *
- * Deploy this as a Web app bound to the Google Sheet that stores your
- * applied and dismissed state. See SETUP.md step 4.
+ * Two jobs:
+ *   1. Store your applied and dismissed marks in this spreadsheet.
+ *   2. Serve the digest that the scheduled run publishes to Google Drive.
  *
- * Security model: a single shared secret sent in the request body. This is
- * not strong auth. It stops casual discovery of the endpoint URL from letting
- * anyone write to your sheet. Do not store anything sensitive here, and do
- * not commit the secret to the public repo.
+ * Deploy as a Web app bound to the tracker spreadsheet. See SETUP.md.
+ *
+ * Security model: a single shared secret sent in the request body. This is not
+ * strong auth. It stops casual discovery of the endpoint URL from letting anyone
+ * write to your sheet. The secret is visible in the site's page source, which is
+ * unavoidable for a static site. Keep nothing sensitive here.
  */
 
-var SECRET = 'CHANGE_ME_TO_A_LONG_RANDOM_STRING';
-var SHEET_NAME = 'state';
-var HEADERS = ['Link', 'Status', 'Date', 'Role', 'Company', 'Updated'];
+var SECRET      = '3e2e369750e26cbbcbcd57e5daf50cef6a8175d18385cd56';
+var SHEET_NAME  = 'state';
+var DIGEST_FILE = 'jobradar_data.json';
+var HEADERS     = ['Link', 'Status', 'Date', 'Role', 'Company', 'Updated'];
 
 /* ---------- entry points ---------- */
 
@@ -34,6 +38,9 @@ function doPost(e) {
     if (body.action === 'list') {
       return json({ ok: true, rows: readAll() });
     }
+    if (body.action === 'digest') {
+      return json({ ok: true, digest: readDigest() });
+    }
     if (body.action === 'set') {
       if (!body.link) return json({ error: 'missing link' });
       upsert(body);
@@ -46,10 +53,38 @@ function doPost(e) {
   }
 }
 
-/* ---------- sheet access ---------- */
+/* ---------- digest, published to Drive by the scheduled run ---------- */
+
+function readDigest() {
+  var it = DriveApp.getFilesByName(DIGEST_FILE);
+  var newest = null;
+  while (it.hasNext()) {
+    var f = it.next();
+    if (f.isTrashed()) continue;
+    if (!newest || f.getLastUpdated() > newest.getLastUpdated()) newest = f;
+  }
+  if (!newest) return null;
+  try {
+    return JSON.parse(newest.getBlob().getDataAsString());
+  } catch (err) {
+    throw new Error('digest file is not valid JSON: ' + err.message);
+  }
+}
+
+/* Run this once from the editor to confirm Drive access and the digest parse. */
+function testDigest() {
+  var d = readDigest();
+  Logger.log(d ? 'digest run ' + d.run + ', software ' +
+                 ((d.software || []).length) + ', hardware ' +
+                 ((d.hardware || []).length)
+               : 'no digest file found named ' + DIGEST_FILE);
+}
+
+/* ---------- tracker state ---------- */
 
 function sheet() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
+  if (!ss) throw new Error('script is not bound to a spreadsheet');
   var sh = ss.getSheetByName(SHEET_NAME);
   if (!sh) {
     sh = ss.insertSheet(SHEET_NAME);
@@ -67,8 +102,7 @@ function readAll() {
   var rows = [];
   for (var i = 0; i < values.length; i++) {
     var v = values[i];
-    if (!v[0]) continue;
-    if (!v[1]) continue;              /* cleared rows are skipped */
+    if (!v[0] || !v[1]) continue;
     rows.push({
       link: String(v[0]),
       status: String(v[1]),
@@ -105,7 +139,6 @@ function upsert(body) {
     ];
 
     if (rowIndex > 0) {
-      /* preserve role and company if this call did not supply them */
       var old = sh.getRange(rowIndex, 1, 1, HEADERS.length).getValues()[0];
       if (!row[3]) row[3] = old[3];
       if (!row[4]) row[4] = old[4];
