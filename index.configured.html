@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Radar</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='13'>&#128225;</text></svg>">
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --panel2:#1d212a; --line:#272c37;
+    --tx:#e8eaef; --tx2:#a2a9b8; --tx3:#727a8c;
+    --accent:#6aa3ff; --urgent:#ff6b6b; --ok:#4ec9a0; --warn:#e8b04b;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f6f7f9; --panel:#ffffff; --panel2:#f0f2f6; --line:#e0e4ea;
+           --tx:#14171d; --tx2:#525a6b; --tx3:#828a9a; --accent:#2563c9;
+           --ok:#12855f; --warn:#9a6a00; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);
+       font:15px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;}
+  .wrap{max-width:960px;margin:0 auto;padding:34px 20px 80px}
+  header{border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:8px}
+  h1{margin:0 0 6px;font-size:25px;letter-spacing:-.02em}
+  .sub{color:var(--tx2);font-size:13.5px}
+  .counts{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px;align-items:center}
+  .pill{background:var(--panel2);border:1px solid var(--line);border-radius:999px;
+        padding:5px 13px;font-size:12.5px;color:var(--tx2)}
+  .pill b{color:var(--tx);font-weight:600}
+  .pill.u{border-color:var(--urgent);color:var(--urgent)}
+  .pill.sync{margin-left:auto;display:inline-flex;align-items:center;gap:7px;cursor:default}
+  .pill.sync .dot{width:7px;height:7px;border-radius:50%;background:var(--tx3);flex:0 0 auto}
+  .pill.sync[data-s="ok"] .dot{background:var(--ok)}
+  .pill.sync[data-s="ok"]{border-color:var(--ok);color:var(--ok)}
+  .pill.sync[data-s="busy"] .dot{background:var(--warn);animation:pulse 1s infinite}
+  .pill.sync[data-s="local"] .dot{background:var(--tx3)}
+  .pill.sync[data-s="err"] .dot{background:var(--urgent)}
+  .pill.sync[data-s="err"]{border-color:var(--urgent);color:var(--urgent);cursor:pointer}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:.09em;color:var(--tx3);
+     margin:34px 0 12px;font-weight:600;display:flex;align-items:center;gap:10px}
+  h2 .n{background:var(--panel2);border:1px solid var(--line);border-radius:999px;
+        padding:1px 9px;font-size:11px;letter-spacing:0}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:11px;
+        padding:15px 17px;margin-bottom:10px}
+  .card.u{border-color:var(--urgent);box-shadow:inset 3px 0 0 var(--urgent)}
+  .card.applied{border-color:var(--ok);box-shadow:inset 3px 0 0 var(--ok)}
+  .card.check{border-style:dashed}
+  .card.pending{opacity:.62}
+  .row1{display:flex;justify-content:space-between;gap:14px;align-items:baseline;flex-wrap:wrap}
+  .title{font-size:15.5px;font-weight:600;letter-spacing:-.01em}
+  .title a{color:var(--tx);text-decoration:none;border-bottom:1px solid var(--line)}
+  .title a:hover{color:var(--accent);border-color:var(--accent)}
+  .co{color:var(--accent);font-size:13.5px;font-weight:500;margin-top:2px}
+  .meta{color:var(--tx3);font-size:12.5px;white-space:nowrap}
+  .note{color:var(--tx2);font-size:13px;margin-top:7px}
+  .tag{display:inline-block;background:var(--urgent);color:#fff;font-size:10.5px;
+       font-weight:700;letter-spacing:.06em;padding:2px 7px;border-radius:4px;
+       vertical-align:2px;margin-right:7px}
+  .tag.ok{background:var(--ok)}
+  .tag.warn{background:var(--warn);color:#1a1400}
+  .tag.q{background:var(--tx3)}
+  .acts{display:flex;gap:8px;margin-top:11px;flex-wrap:wrap;align-items:center}
+  button{font:inherit;font-size:12.5px;font-weight:500;cursor:pointer;
+         background:var(--panel2);color:var(--tx2);border:1px solid var(--line);
+         border-radius:7px;padding:5px 12px;transition:.12s}
+  button:hover{color:var(--tx);border-color:var(--tx3)}
+  button:disabled{opacity:.5;cursor:default}
+  button.pri{border-color:var(--ok);color:var(--ok)}
+  button.pri:hover{background:var(--ok);color:#04120c;border-color:var(--ok)}
+  .toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 4px}
+  .empty{color:var(--tx3);font-size:13.5px;font-style:italic;
+         border:1px dashed var(--line);border-radius:11px;padding:15px 17px}
+  .banner{background:var(--panel2);border:1px solid var(--line);border-left:3px solid var(--warn);
+          border-radius:9px;padding:12px 15px;margin:22px 0 0;color:var(--tx2);font-size:13px}
+  .banner.err{border-left-color:var(--urgent)}
+  .banner b{color:var(--tx)}
+  .banner code{font:12px ui-monospace,SFMono-Regular,Menlo,monospace;
+               background:var(--bg);padding:1px 5px;border-radius:4px}
+  footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--line);
+         color:var(--tx3);font-size:12px;line-height:1.7}
+  #toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
+         background:var(--panel2);border:1px solid var(--line);border-radius:9px;
+         padding:9px 17px;font-size:13px;color:var(--tx);opacity:0;pointer-events:none;
+         transition:.22s;box-shadow:0 6px 26px rgba(0,0,0,.34);z-index:9}
+  #toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+  #toast.bad{border-color:var(--urgent);color:var(--urgent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Job Radar</h1>
+  <div class="sub" id="sub">Loading…</div>
+  <div class="counts" id="counts"></div>
+</header>
+
+<div id="notice"></div>
+
+<div class="toolbar">
+  <button id="btnDis">Show dismissed</button>
+  <button id="btnSync">Sync now</button>
+</div>
+
+<div id="out"></div>
+
+<footer>
+  Every link was fetched and confirmed live before publishing. Needs Manual Check
+  holds two kinds of item: pages that returned only JavaScript scaffolding, and
+  real company program pages that have not dated their next session yet. Both are
+  shown unverified rather than dropped. Open them yourself.<br>
+  Applied and dismissed state is stored in your Google Sheet, so it follows you
+  across devices. If the sheet cannot be reached, changes are kept locally and
+  retried automatically the next time this page loads.
+</footer>
+</div>
+<div id="toast"></div>
+
+<script>
+/* ------------------------------------------------------------------
+   CONFIG. Fill these two in after deploying the Apps Script.
+   Leave endpoint empty to run in local only mode.
+------------------------------------------------------------------ */
+var CONFIG = {
+  endpoint: "https://script.google.com/macros/s/AKfycbyrW-MZZzZQfhcxzZLy1VP9MZf-7QTUQJLNXcRqC-Jgd1D9V5y_-Uu1c_QHj0zJFX5M/exec",
+  secret: "3e2e369750e26cbbcbcd57e5daf50cef6a8175d18385cd56"
+};
+
+var LS_STATE = "jobradar.state.v1";
+var LS_QUEUE = "jobradar.queue.v1";
+
+var DIGEST = { run:"", events:[], software:[], hardware:[], needsCheck:[] };
+var state = {};        /* link -> {status:"applied"|"dismissed", date:"YYYY-MM-DD"} */
+var queue = [];        /* pending writes not yet accepted by the sheet */
+var showDismissed = false;
+var syncState = "local";
+var syncMsg = "Local only";
+var digestSource = "";   /* "live" or "bundled: <reason>" */
+
+/* ---------------- helpers ---------------- */
+function esc(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;")
+                   .replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function today(){ var d=new Date(); return d.getFullYear()+"-"+
+    String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+function nowIso(){ return new Date().toISOString(); }
+function configured(){ return !!(CONFIG.endpoint && CONFIG.secret); }
+
+function lsGet(k, dflt){
+  try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : dflt; }
+  catch(e){ return dflt; }
+}
+function lsSet(k, v){
+  try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){}
+}
+function toast(msg, bad){
+  var t=document.getElementById("toast");
+  t.textContent=msg; t.className = "on" + (bad?" bad":"");
+  clearTimeout(toast._t);
+  toast._t=setTimeout(function(){ t.className=""; }, 2600);
+}
+function setSync(s, msg){
+  syncState=s; syncMsg=msg; paintSync();
+}
+function paintSync(){
+  var el=document.getElementById("syncPill");
+  if(!el) return;
+  el.setAttribute("data-s", syncState);
+  el.querySelector("span.lbl").textContent = syncMsg;
+}
+
+/* ---------------- transport ----------------
+   POST with text/plain so the browser treats it as a simple request and
+   skips the CORS preflight, which Apps Script cannot answer.
+-------------------------------------------- */
+function call(payload){
+  payload.secret = CONFIG.secret;
+  return fetch(CONFIG.endpoint, {
+    method: "POST",
+    headers: { "Content-Type": "text/plain;charset=utf-8" },
+    body: JSON.stringify(payload),
+    redirect: "follow"
+  }).then(function(r){
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    return r.json();
+  }).then(function(j){
+    if(j && j.error) throw new Error(j.error);
+    return j;
+  });
+}
+
+/* ---------------- sync ---------------- */
+function pull(){
+  if(!configured()){ setSync("local","Local only"); return Promise.resolve(); }
+  setSync("busy","Syncing…");
+  return call({action:"list"}).then(function(res){
+    var remote = {};
+    (res.rows||[]).forEach(function(r){
+      if(r.link && r.status) remote[r.link] = { status:r.status, date:r.date||"" };
+    });
+    /* queued local writes have not landed yet, so they win over remote */
+    queue.forEach(function(op){ remote[op.link] = { status:op.status, date:op.date }; });
+    state = remote;
+    lsSet(LS_STATE, state);
+    if(queue.length){ setSync("busy","Syncing…"); return flush(); }
+    setSync("ok","Synced");
+  }).catch(function(err){
+    setSync("err","Sync failed"+(queue.length?" ("+queue.length+" pending)":""));
+    notice("err","Could not reach the tracker sheet: <b>"+esc(err.message)+
+      "</b>. Your changes are saved in this browser and will be retried on the next load. "+
+      "Nothing has been lost.");
+  });
+}
+
+function flush(){
+  if(!configured() || !queue.length) return Promise.resolve();
+  var op = queue[0];
+  return call({ action:"set", link:op.link, status:op.status, date:op.date,
+                role:op.role, company:op.company })
+    .then(function(){
+      queue.shift(); lsSet(LS_QUEUE, queue);
+      if(queue.length) return flush();
+      setSync("ok","Synced"); notice(null);
+    })
+    .catch(function(err){
+      setSync("err","Sync failed ("+queue.length+" pending)");
+      notice("err","Could not reach the tracker sheet: <b>"+esc(err.message)+
+        "</b>. Your changes are saved in this browser and will be retried on the next load. "+
+        "Nothing has been lost.");
+      toast("Not saved to the sheet yet", true);
+      throw err;
+    });
+}
+
+function record(link, status, meta){
+  if(status) state[link] = { status:status, date:today() };
+  else delete state[link];
+  lsSet(LS_STATE, state);
+
+  if(configured()){
+    queue = queue.filter(function(o){ return o.link !== link; });
+    queue.push({ link:link, status:status||"", date:status?today():"",
+                 role:(meta&&meta.role)||"", company:(meta&&meta.company)||"" });
+    lsSet(LS_QUEUE, queue);
+    setSync("busy","Saving…");
+    flush().catch(function(){ /* already surfaced */ });
+  }
+  render();
+}
+
+function notice(kind, html){
+  var el=document.getElementById("notice");
+  if(!kind){ el.innerHTML=""; return; }
+  el.innerHTML='<div class="banner'+(kind==="err"?" err":"")+'">'+html+'</div>';
+}
+
+/* ---------------- render ---------------- */
+function all(){
+  var out=[];
+  (DIGEST.events||[]).forEach(function(o){ out.push({o:o,kind:"event",grp:"Events"}); });
+  (DIGEST.software||[]).forEach(function(o){ out.push({o:o,kind:"job",grp:"Software"}); });
+  (DIGEST.hardware||[]).forEach(function(o){ out.push({o:o,kind:"job",grp:"Hardware"}); });
+  (DIGEST.needsCheck||[]).forEach(function(o){ out.push({o:o,kind:"job",grp:"Needs Manual Check"}); });
+  return out;
+}
+function stat(link){ return (state[link]||{}).status || ""; }
+function isQueued(link){ return queue.some(function(o){ return o.link===link; }); }
+
+function card(it){
+  var o=it.o, k=it.kind;
+  var t = k==="event" ? (o.title||o.role) : o.role;
+  var d = k==="event" ? o.date : (o.posted ? "posted "+o.posted : "date not stated");
+  var st = stat(o.link);
+  var isA = st==="applied", isC = it.grp==="Needs Manual Check", q = isQueued(o.link);
+  var cls = "card" + (isA?" applied":(o.urgent?" u":"")) + (isC?" check":"") + (q?" pending":"");
+  var tag = isA ? '<span class="tag ok">APPLIED '+esc((state[o.link]||{}).date)+'</span>'
+          : isC ? '<span class="tag warn">UNVERIFIED</span>'
+          : o.urgent ? '<span class="tag">URGENT</span>' : '';
+  if(q) tag += '<span class="tag q">SAVING</span>';
+  var meta = 'data-role="'+esc(o.role||t)+'" data-co="'+esc(o.company)+'"';
+  var acts;
+  if(st==="dismissed") acts = '<button data-act="clear" data-k="'+esc(o.link)+'" '+meta+'>Restore</button>';
+  else if(isA)         acts = '<button data-act="clear" data-k="'+esc(o.link)+'" '+meta+'>Undo applied</button>';
+  else acts = '<button class="pri" data-act="applied" data-k="'+esc(o.link)+'" '+meta+'>Mark as applied</button>'+
+              '<button data-act="dismissed" data-k="'+esc(o.link)+'" '+meta+'>Dismiss</button>';
+  return '<div class="'+cls+'"><div class="row1"><div>'+tag+
+    '<span class="title"><a href="'+esc(o.link)+'" target="_blank" rel="noopener">'+
+    esc(t)+'</a></span><div class="co">'+esc(o.company)+
+    (isA?' &middot; '+esc(it.grp):'')+'</div></div>'+
+    '<div class="meta">'+esc(d)+'</div></div>'+
+    (o.note?'<div class="note">'+esc(o.note)+'</div>':'')+
+    '<div class="acts">'+acts+'</div></div>';
+}
+
+function section(title, items, emptyMsg){
+  var h='<h2>'+title+'<span class="n">'+items.length+'</span></h2>';
+  if(!items.length) return h+'<div class="empty">'+emptyMsg+'</div>';
+  var s=items.slice().sort(function(a,b){ return (b.o.urgent?1:0)-(a.o.urgent?1:0); });
+  return h+s.map(card).join("");
+}
+
+function render(){
+  var items=all();
+  var live=items.filter(function(i){ return !stat(i.o.link); });
+  var appd=items.filter(function(i){ return stat(i.o.link)==="applied"; });
+  var dism=items.filter(function(i){ return stat(i.o.link)==="dismissed"; });
+  var byGrp=function(g){ return live.filter(function(i){ return i.grp===g; }); };
+  var urgentN=live.filter(function(i){ return i.o.urgent; }).length;
+
+  document.getElementById("sub").textContent =
+    "Run "+(DIGEST.run||"unknown")+". New findings only."+
+    (digestSource.indexOf("bundled")===0
+      ? "  Showing the fallback copy, "+digestSource.slice(9)+"." : "");
+  document.getElementById("counts").innerHTML=
+    '<span class="pill"><b>'+byGrp("Events").length+'</b> events</span>'+
+    '<span class="pill"><b>'+byGrp("Software").length+'</b> software</span>'+
+    '<span class="pill"><b>'+byGrp("Hardware").length+'</b> hardware</span>'+
+    (urgentN?'<span class="pill u"><b>'+urgentN+'</b> urgent</span>':'')+
+    '<span class="pill"><b>'+appd.length+'</b> applied</span>'+
+    '<span class="pill sync" id="syncPill" data-s="local"><i class="dot"></i>'+
+    '<span class="lbl"></span></span>';
+  paintSync();
+
+  var html =
+    section("Events", byGrp("Events"),
+            "No company hosted event has a confirmed 2026 date right now. "+
+            "The series pages to watch are under Needs Manual Check below.")+
+    section("Software", byGrp("Software"), "No open software roles left in this run.")+
+    section("Hardware", byGrp("Hardware"), "No open hardware roles left in this run.")+
+    section("Needs Manual Check", byGrp("Needs Manual Check"),
+            "Nothing needed a manual look this run.");
+  if(showDismissed) html += section("Dismissed", dism, "Nothing dismissed yet.");
+  html += section("Application Tracker", appd,
+            "Nothing marked as applied yet. Use the button on any card above.");
+  document.getElementById("out").innerHTML=html;
+  document.getElementById("btnDis").textContent=
+    (showDismissed?"Hide dismissed":"Show dismissed")+" ("+dism.length+")";
+}
+
+/* ---------------- events ---------------- */
+document.addEventListener("click", function(e){
+  var b=e.target.closest("button[data-act]"); if(!b) return;
+  var act=b.getAttribute("data-act"), k=b.getAttribute("data-k");
+  var meta={ role:b.getAttribute("data-role"), company:b.getAttribute("data-co") };
+  record(k, act==="clear" ? "" : act, meta);
+  if(!configured()) toast(act==="clear" ? "Cleared, this browser only"
+                                        : "Saved to this browser only");
+});
+document.getElementById("btnDis").onclick=function(){ showDismissed=!showDismissed; render(); };
+document.getElementById("btnSync").onclick=function(){
+  if(!configured()){ toast("No endpoint configured yet", true); return; }
+  pull().then(function(){ if(syncState==="ok") toast("Up to date"); });
+};
+
+/* ---------------- digest loading ----------------
+   Live findings come from Apps Script, which reads the file the scheduled run
+   publishes to Drive. The data.json committed next to this page is a fallback
+   so the site still shows something if that path is down.
+------------------------------------------------- */
+function localDigest(){
+  return fetch("data.json", {cache:"no-store"}).then(function(r){
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    return r.json();
+  });
+}
+
+function loadDigest(){
+  if(!configured()) return localDigest();
+  return call({action:"digest"}).then(function(res){
+    if(!res.digest) throw new Error("nothing published yet");
+    digestSource="live";
+    return res.digest;
+  }).catch(function(err){
+    return localDigest().then(function(j){
+      digestSource="bundled: "+err.message;
+      return j;
+    });
+  });
+}
+
+/* ---------------- boot ---------------- */
+state = lsGet(LS_STATE, {});
+queue = lsGet(LS_QUEUE, []);
+
+loadDigest()
+  .then(function(j){ DIGEST=j; render(); return pull().then(render); })
+  .catch(function(err){
+    document.getElementById("sub").textContent="Could not load any findings";
+    notice("err","<b>No digest could be loaded.</b> "+esc(err.message)+
+      ". If you opened this file directly from disk, browsers block the fetch. "+
+      "Serve the folder over http instead, for example <code>python3 -m http.server</code>.");
+    render();
+  });
+
+if(!configured()){
+  notice("warn","<b>Local only mode.</b> Applied and dismissed marks are saved in this "+
+    "browser and will not follow you to other devices. Add your Apps Script endpoint and "+
+    "secret to <code>CONFIG</code> at the top of the script block in index.html to turn on "+
+    "sheet syncing.");
+}
+</script>
+</body>
+</html>
