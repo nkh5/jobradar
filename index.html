@@ -135,6 +135,7 @@ var queue = [];        /* pending writes not yet accepted by the sheet */
 var showDismissed = false;
 var syncState = "local";
 var syncMsg = "Local only";
+var digestSource = "";   /* "live" or "bundled: <reason>" */
 
 /* ---------------- helpers ---------------- */
 function esc(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;")
@@ -306,7 +307,9 @@ function render(){
   var urgentN=live.filter(function(i){ return i.o.urgent; }).length;
 
   document.getElementById("sub").textContent =
-    "Run "+(DIGEST.run||"unknown")+". New findings only.";
+    "Run "+(DIGEST.run||"unknown")+". New findings only."+
+    (digestSource.indexOf("bundled")===0
+      ? "  Showing the fallback copy, "+digestSource.slice(9)+"." : "");
   document.getElementById("counts").innerHTML=
     '<span class="pill"><b>'+byGrp("Events").length+'</b> events</span>'+
     '<span class="pill"><b>'+byGrp("Software").length+'</b> software</span>'+
@@ -348,16 +351,41 @@ document.getElementById("btnSync").onclick=function(){
   pull().then(function(){ if(syncState==="ok") toast("Up to date"); });
 };
 
+/* ---------------- digest loading ----------------
+   Live findings come from Apps Script, which reads the file the scheduled run
+   publishes to Drive. The data.json committed next to this page is a fallback
+   so the site still shows something if that path is down.
+------------------------------------------------- */
+function localDigest(){
+  return fetch("data.json", {cache:"no-store"}).then(function(r){
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    return r.json();
+  });
+}
+
+function loadDigest(){
+  if(!configured()) return localDigest();
+  return call({action:"digest"}).then(function(res){
+    if(!res.digest) throw new Error("nothing published yet");
+    digestSource="live";
+    return res.digest;
+  }).catch(function(err){
+    return localDigest().then(function(j){
+      digestSource="bundled: "+err.message;
+      return j;
+    });
+  });
+}
+
 /* ---------------- boot ---------------- */
 state = lsGet(LS_STATE, {});
 queue = lsGet(LS_QUEUE, []);
 
-fetch("data.json", {cache:"no-store"})
-  .then(function(r){ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
+loadDigest()
   .then(function(j){ DIGEST=j; render(); return pull().then(render); })
   .catch(function(err){
-    document.getElementById("sub").textContent="Could not load data.json";
-    notice("err","<b>data.json failed to load.</b> "+esc(err.message)+
+    document.getElementById("sub").textContent="Could not load any findings";
+    notice("err","<b>No digest could be loaded.</b> "+esc(err.message)+
       ". If you opened this file directly from disk, browsers block the fetch. "+
       "Serve the folder over http instead, for example <code>python3 -m http.server</code>.");
     render();
