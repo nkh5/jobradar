@@ -1,0 +1,171 @@
+{
+  "run": "2026.08.14",
+  "generated": "2026-08-14T22:02:00Z",
+  "events": [],
+  "software": [
+    {
+      "role": "[2027] Software Engineer, Early Career",
+      "company": "Roblox",
+      "posted": "2026-08-11",
+      "link": "https://careers.roblox.com/jobs/8072244",
+      "urgent": false,
+      "note": "San Mateo, tagged for 2027 grads, BS sufficient"
+    },
+    {
+      "role": "Software Engineer I - New Grad, SF",
+      "company": "Samsara",
+      "posted": "2026-08-09",
+      "link": "https://www.samsara.com/company/careers/roles/8097343",
+      "urgent": true,
+      "note": "San Francisco, closes Aug 24, needs Spring 2027 grad"
+    },
+    {
+      "role": "Software Engineer, New Grad - Defense",
+      "company": "Palantir",
+      "posted": "",
+      "link": "https://jobs.lever.co/palantir/f362d7aa-360d-4059-ab38-f482742693b3",
+      "urgent": false,
+      "note": "Palo Alto, clearance eligibility enough, citizenship an advantage"
+    },
+    {
+      "role": "Software Engineer, New Grad - Production Infrastructure",
+      "company": "Palantir",
+      "posted": "",
+      "link": "https://jobs.lever.co/palantir/15844944-fb69-4b57-9531-e988650b20c6",
+      "urgent": false,
+      "note": "Washington DC, systems focus, clearance sponsored"
+    },
+    {
+      "role": "Software Engineer, New Grad",
+      "company": "Palantir",
+      "posted": "",
+      "link": "https://jobs.lever.co/palantir/94984771-0704-446c-88c6-91ce748f6d92",
+      "urgent": false,
+      "note": "New York, no class year limit, clearance sponsored"
+    },
+    {
+      "role": "Software Engineer I - Metrics for Release",
+      "company": "Torc Robotics",
+      "posted": "2026-08-11",
+      "link": "https://job-boards.greenhouse.io/torcrobotics/jobs/8676173002",
+      "urgent": false,
+      "note": "Ann Arbor, Blacksburg, Fort Worth, autonomy stack"
+    },
+    {
+      "role": "Software Engineering AMTS (College Grad)",
+      "company": "Salesforce",
+      "posted": "2026-08-11",
+      "link": "https://salesforce.wd12.myworkdayjobs.com/Futureforce_NewGradRoles/job/California---San-Francisco/Software-Engineering-AMTS--College-Grad-_JR355250",
+      "urgent": false,
+      "note": "San Francisco, Futureforce track, zero experience required"
+    }
+  ],
+  "hardware": [
+    {
+      "role": "FPGA Engineer I, Airborne RF Electronics Design",
+      "company": "RTX Raytheon",
+      "posted": "2026-08-12",
+      "link": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-TX-MCKINNEY-513WC--2501-W-University-Dr--WING-C-BLDG/FPGA-Engineer-I_01866334-1",
+      "urgent": false,
+      "note": "McKinney TX, citizenship required, Secret clearance sponsored"
+    },
+    {
+      "role": "FPGA Engineer I",
+      "company": "RTX Raytheon",
+      "posted": "2026-08-11",
+      "link": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-TX-MCKINNEY-513WD--2501-W-University-Dr--WING-D-BLDG/FPGA-Engineer-I_01857935",
+      "urgent": false,
+      "note": "McKinney TX, second requisition, apply to both"
+    },
+    {
+      "role": "FPGA Engineer I",
+      "company": "RTX Raytheon",
+      "posted": "2026-07-31",
+      "link": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-AL-HUNTSVILLE-315--315-Bob-Heath-Dr--BOB-HEATH/FPGA-Engineer-I_01863350-1",
+      "urgent": false,
+      "note": "Huntsville AL, citizenship required, window closes early Sept"
+    },
+    {
+      "role": "New College Grad - Semiconductor Design Engineer, DRAM Products Group",
+      "company": "Micron",
+      "posted": "2026-06-14",
+      "link": "https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---Main-Site/New-College-Grad---Semiconductor-Design-Engineer--DRAM-Products-Group_JR89353",
+      "urgent": false,
+      "note": "Boise ID hybrid, BS in EE explicitly sufficient"
+    },
+    {
+      "role": "Digital Hardware Engineer I",
+      "company": "RTX Raytheon",
+      "posted": "2026-05-12",
+      "link": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-AL-HUNTSVILLE-315--315-Bob-Heath-Dr--BOB-HEATH/Digital-Hardware-Engineer-I_01841999-1",
+      "urgent": true,
+      "note": "Huntsville AL, stated window lapsed, apply now or skip"
+    }
+  ],
+  "needsCheck": [
+    {
+      "role": "2027 Roblox Rising Builders",
+      "company": "Roblox",
+      "posted": "",
+      "link": "https://2027robloxrisingbuilders.splashthat.com/",
+      "urgent": true,
+      "note": "Live page, applications opened early August, listed dates say 2025"
+    },
+    {
+      "role": "Career Programs Virtual Learning Series 2026",
+      "company": "Meta",
+      "posted": "",
+      "link": "https://events.atmeta.com/metacareerprogramsvirtuallearningseries20261",
+      "urgent": false,
+      "note": "Wave 2 ended Aug 7, Wave 3 promised but undated"
+    },
+    {
+      "role": "Discover Lockheed Martin event portal",
+      "company": "Lockheed Martin",
+      "posted": "",
+      "link": "https://lockheedmartin.recsolu.com/external/events/Be2AapYiqnxse7JJJyQNjg",
+      "urgent": false,
+      "note": "Yello portal, renders empty, fall tech talks post here"
+    },
+    {
+      "role": "University Recruiting events calendar",
+      "company": "Nvidia",
+      "posted": "",
+      "link": "https://www.nvidia.com/en-us/about-nvidia/careers/university-recruiting/events-calendar/",
+      "urgent": false,
+      "note": "Listings load client side, best ASIC and silicon fit"
+    },
+    {
+      "role": "Student hiring events hub",
+      "company": "Northrop Grumman",
+      "posted": "",
+      "link": "https://www.northropgrumman.com/careers/northrop-grumman-events",
+      "urgent": false,
+      "note": "Hub loads empty, fall university series not yet posted"
+    },
+    {
+      "role": "Programs and Events hub",
+      "company": "Citadel Securities",
+      "posted": "",
+      "link": "https://www.citadelsecurities.com/careers/programs-and-events/",
+      "urgent": false,
+      "note": "Eight programs listed, no dates yet, Terminal and Datathon fit"
+    },
+    {
+      "role": "Programs and Events hub",
+      "company": "Jane Street",
+      "posted": "",
+      "link": "https://www.janestreet.com/join-jane-street/programs-and-events/",
+      "urgent": false,
+      "note": "Redirect loop blocked fetch, quant deadlines cluster in September"
+    },
+    {
+      "role": "2027 Associate Engineer Electrical",
+      "company": "Northrop Grumman",
+      "posted": "",
+      "link": "https://jobs.northropgrumman.com/careers/job/1340072144247-2027-associate-engineer-electrical-engineer-electrical-united-states-florida-melbourne?domain=ngc.com",
+      "urgent": false,
+      "note": "Melbourne FL, title confirms 2027 cycle, page would not render"
+    }
+  ]
+}
