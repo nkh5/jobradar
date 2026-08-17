@@ -267,13 +267,13 @@ function isQueued(link){ return queue.some(function(o){ return o.link===link; })
 
 function card(it){
   var o=it.o, k=it.kind;
-  var t = k==="event" ? (o.title||o.role) : o.role;
+  var t = o.role || o.title;
   var d = k==="event" ? o.date : (o.posted ? "posted "+o.posted : "date not stated");
   var st = stat(o.link);
   var isA = st==="applied", isC = it.grp==="Needs Manual Check", q = isQueued(o.link);
   var cls = "card" + (isA?" applied":(o.urgent?" u":"")) + (isC?" check":"") + (q?" pending":"");
   var tag = isA ? '<span class="tag ok">APPLIED '+esc((state[o.link]||{}).date)+'</span>'
-          : isC ? '<span class="tag warn">UNVERIFIED</span>'
+          : isC ? '<span class="tag warn">Watching</span>'
           : o.urgent ? '<span class="tag">URGENT</span>' : '';
   if(q) tag += '<span class="tag q">SAVING</span>';
   var meta = 'data-role="'+esc(o.role||t)+'" data-co="'+esc(o.company)+'"';
