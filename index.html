@@ -352,9 +352,10 @@ document.getElementById("btnSync").onclick=function(){
 };
 
 /* ---------------- digest loading ----------------
-   Live findings come from Apps Script, which reads the file the scheduled run
-   publishes to Drive. The data.json committed next to this page is a fallback
-   so the site still shows something if that path is down.
+   Findings come from data.json, committed next to this page by the scheduled
+   run. Apps Script is only a fallback, for the case where this page is opened
+   from somewhere the committed copy is stale or missing. The tracker sheet
+   (applied / dismissed) still goes through Apps Script either way.
 ------------------------------------------------- */
 function localDigest(){
   return fetch("data.json", {cache:"no-store"}).then(function(r){
@@ -364,15 +365,15 @@ function localDigest(){
 }
 
 function loadDigest(){
-  if(!configured()) return localDigest();
-  return call({action:"digest"}).then(function(res){
-    if(!res.digest) throw new Error("nothing published yet");
+  return localDigest().then(function(j){
     digestSource="live";
-    return res.digest;
+    return j;
   }).catch(function(err){
-    return localDigest().then(function(j){
-      digestSource="bundled: "+err.message;
-      return j;
+    if(!configured()) throw err;
+    return call({action:"digest"}).then(function(res){
+      if(!res.digest) throw new Error("nothing published yet");
+      digestSource="bundled: data.json unreachable, "+err.message;
+      return res.digest;
     });
   });
 }
