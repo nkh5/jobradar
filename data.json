@@ -1,2 +1,256 @@
-{"run":"2026.09.02","generated":"2026-09-02T17:03:21Z","events":[],"software":[{"role":"Software Development Engineer I, Early Career (2027 Starts)","company":"Blue Origin","posted":"2026-08-31","link":"https://blueorigin.wd5.myworkdayjobs.com/blueorigin/job/Greater-Seattle-Area/Software-Development-Engineer-I---Early-Career--2027-Starts-_R71326","urgent":false,"note":"5 US sites, BS, start by Fall 2027, US person required"},{"role":"Software Engineer, New Grad","company":"Stripe","posted":"2026-08-31","link":"https://stripe.com/jobs/search?gh_jid=8128744","urgent":false,"note":"SF, Seattle, NYC. Degree by summer 2027"},{"role":"Software Engineer, 2027 New Grad","company":"Whatnot","posted":"2026-08-31","link":"https://jobs.ashbyhq.com/whatnot/29bad846-de60-4be7-a222-69b97e044930","urgent":false,"note":"NYC, LA, SF, Seattle. Graduate by Summer 2027"},{"role":"Software Engineer, Agent (New Grad 2027)","company":"Sierra","posted":"2026-09-01","link":"https://jobs.ashbyhq.com/Sierra/149f368c-52d5-408f-ba26-ad888f318a00","urgent":false,"note":"SF and NYC onsite, 150K to 180K plus equity"},{"role":"Algorithm Developer I, New College Grad (Bachelors)","company":"Applied Materials","posted":"2026-09-01","link":"https://amat.wd1.myworkdayjobs.com/external/job/Santa-ClaraCA/Algorithm-Developer-I-New-College-Grad--Bachelor-s--Santa-Clara--CA-_R2626605","urgent":false,"note":"Santa Clara CA, BS accepted, no experience floor"},{"role":"Forward Deployed Infrastructure Engineer, New Grad, US Government","company":"Palantir","posted":"2026-08-31","link":"https://jobs.lever.co/palantir/701a9307-0619-45d3-b077-cabe9897cd12","urgent":false,"note":"Honolulu HI, clearance eligibility only, citizenship an advantage"},{"role":"Software Engineer New Grad","company":"Valon","posted":"2026-09-01","link":"https://jobs.ashbyhq.com/valon/e08ad09a-4408-4210-8c1b-da6510f83324","urgent":false,"note":"NYC and SF, 135K to 160K, no experience floor"},{"role":"Entry-Level Software Engineer","company":"AeroVironment","posted":"2026-09-01","link":"https://avav.wd1.myworkdayjobs.com/avav/job/Austin-TX/Entry-Level-Software-Engineer_8600","urgent":false,"note":"Austin TX, 0-3 yrs, US citizenship required, Secret eligibility"},{"role":"Software Engineer I","company":"Everlaw","posted":"2026-08-31","link":"https://job-boards.greenhouse.io/everlaw/jobs/4705236006","urgent":false,"note":"Oakland CA, BS or MS, no visa sponsorship offered"},{"role":"WaveLogic Software Developer, New Grad","company":"Ciena","posted":"2026-09-01","link":"https://ciena.wd5.myworkdayjobs.com/careers/job/Atlanta/WaveLogic-Software-Developer---New-Grad_R031608","urgent":false,"note":"Atlanta GA, embedded C/C++, EE or CE degree"}],"hardware":[{"role":"Avionics / Embedded Software Engineer I, Early Career (2027 Starts)","company":"Blue Origin","posted":"2026-08-31","link":"https://blueorigin.wd5.myworkdayjobs.com/blueorigin/job/Greater-Seattle-Area/Avionics---Embedded-Software-Engineer-I---Early-Career--2027-Starts-_R71324","urgent":false,"note":"BS, start by Fall 2027, US person required"},{"role":"SOC Design Verification Engineer","company":"Qualcomm","posted":"","link":"https://careers.qualcomm.com/careers/job/446720709619","urgent":false,"note":"San Diego CA, BS minimum, no experience floor"},{"role":"New College Grad, Mixed Signal Design Engineer, HBM","company":"Micron","posted":"2026-09-01","link":"https://micron.wd1.myworkdayjobs.com/External/job/Richardson-TX/New-College-Grad---Mixed-Signal-Design-Engineer--HBM_JR110753","urgent":false,"note":"Richardson TX, BS or MS, SystemVerilog RTL"},{"role":"New College Grad, Design Readiness Engineer","company":"Micron","posted":"2026-08-31","link":"https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---Main-Site/New-College-Grad---Design-Readiness-Engineer_JR106372","urgent":false,"note":"Boise ID, BS EE or CE, validation and product engineering"},{"role":"Design Verification Engineer","company":"Texas Instruments","posted":"2026-08-26","link":"https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25017445/","urgent":false,"note":"Dallas TX, BS, asks 1+ yr AMS DV, under the 2 yr cutoff"}],"needsCheck":[{"company":"Lockheed Martin","role":"Discover LM event portal, still serving a Sept 10 2020 workshop with registration open","link":"https://lockheedmartin.recsolu.com/external/events/Be2AapYiqnxse7JJJyQNjg","note":"Stale year trap, no fall 2026 session dated"},{"company":"Northrop Grumman","role":"Student hiring events hub, no dated fall 2026 virtual sessions","link":"https://www.northropgrumman.com/careers/northrop-grumman-events","note":"Generic hub only this run"},{"company":"Micron","role":"ETCH series hub, all FY26 sessions past, latest Mar 6 2026","link":"https://micron.eightfold.ai/events/open?domain=micron.com","note":"No FY27 ETCH session dated yet"},{"company":"Meta","role":"Career Programs Virtual Learning Series, 2026 edition ran Aug 3 to 7 2026","link":"https://metacareerprogramsvirtuallearningseries2026.splashthat.com/","note":"Next wave not dated"}]
+{
+  "run": "2026.09.03",
+  "generated": "2026-09-03T16:35:00Z",
+  "events": [
+    {
+      "company": "Roblox",
+      "title": "Rising Builder: Avatar and Identity",
+      "date": "2026.09.10",
+      "link": "https://risingbuilderavatarandidentity.splashthat.com/",
+      "urgent": true,
+      "note": "Virtual 3pm PT, page states 09/10/2026, ties to 2027 early career reqs"
+    }
+  ],
+  "software": [
+    {
+      "role": "2027 Early Career Flight Software Engineer",
+      "company": "Anduril",
+      "posted": "2026-09-02",
+      "link": "https://boards.greenhouse.io/andurilindustries/jobs/5228868007",
+      "urgent": false,
+      "note": "Costa Mesa CA, US Person required, 2027 start, $112-149k"
+    },
+    {
+      "role": "[2027] Software Engineer, Early Career",
+      "company": "Roblox",
+      "posted": "",
+      "link": "https://careers.roblox.com/jobs/8072244",
+      "urgent": false,
+      "note": "San Mateo CA, undergrad or grad degree, no experience floor"
+    },
+    {
+      "role": "Software Engineer, Early Careers 2027 Start",
+      "company": "Arch",
+      "posted": "2026-09-02",
+      "link": "https://jobs.ashbyhq.com/arch.co/9fde8d03-9f47-44ac-bd14-53829722c06d",
+      "urgent": false,
+      "note": "New York City, grads Dec 2026 through Aug 2027"
+    },
+    {
+      "role": "Software Engineer, New College Graduate",
+      "company": "Sift Stack",
+      "posted": "2026-09-02",
+      "link": "https://jobs.ashbyhq.com/siftstack/0d65481e-e762-4d8f-ae38-5040754a5134",
+      "urgent": false,
+      "note": "Marina Del Rey CA, Bachelor's, no experience floor"
+    },
+    {
+      "role": "Software Engineer New Grad",
+      "company": "Valon",
+      "posted": "2026-09-02",
+      "link": "https://jobs.ashbyhq.com/Valon/e08ad09a-4408-4210-8c1b-da6510f83324",
+      "urgent": false,
+      "note": "New York and San Francisco, 0-1 year background"
+    },
+    {
+      "role": "Software Engineer, Agent (New Grad 2027)",
+      "company": "Sierra",
+      "posted": "2026-09-01",
+      "link": "https://jobs.ashbyhq.com/Sierra/149f368c-52d5-408f-ba26-ad888f318a00",
+      "urgent": false,
+      "note": "San Francisco and New York, agent team"
+    },
+    {
+      "role": "Software Engineer, 2027 New Grad",
+      "company": "Whatnot",
+      "posted": "2026-09-01",
+      "link": "https://jobs.ashbyhq.com/whatnot/29bad846-de60-4be7-a222-69b97e044930",
+      "urgent": false,
+      "note": "NY, LA, SF, Seattle; degree by Summer 2027"
+    },
+    {
+      "role": "Core Development Program (Software Engineer rotational)",
+      "company": "InterSystems",
+      "posted": "2026-09-02",
+      "link": "https://job-boards.greenhouse.io/intersystems/jobs/7827894003",
+      "urgent": false,
+      "note": "Boston MA, Fall 2026 or Spring 2027 grads, BS MS or PhD"
+    },
+    {
+      "role": "Recent Graduate - Software Engineer I",
+      "company": "Katalyst Space Technologies",
+      "posted": "2026-09-01",
+      "link": "https://job-boards.greenhouse.io/katalyst/jobs/6176710004",
+      "urgent": false,
+      "note": "Broomfield CO, ITAR US citizen required, an advantage"
+    },
+    {
+      "role": "Early Career LDP: Engineering Technology, Embedded Systems",
+      "company": "Eaton",
+      "posted": "2026-09-01",
+      "link": "https://eaton.eightfold.ai/careers/job/687238044194",
+      "urgent": false,
+      "note": "Moon Twp PA, grad before Aug 2027, $90k BS, internship required"
+    },
+    {
+      "role": "WaveLogic Software Developer, New Grad",
+      "company": "Ciena",
+      "posted": "2026-09-01",
+      "link": "https://ciena.wd5.myworkdayjobs.com/Careers/job/Atlanta/WaveLogic-Software-Developer---New-Grad_R031608",
+      "urgent": false,
+      "note": "Atlanta GA, BSEE or BSCE, C and C++"
+    },
+    {
+      "role": "Engineer I - Embedded Software Engineer (EDP 2027)",
+      "company": "Vermeer",
+      "posted": "2026-09-01",
+      "link": "https://vermeer.wd5.myworkdayjobs.com/externalcareersite/job/Pella-Iowa-USA---Plant-7--West-Segment-Office/Engineer-I---Embedded-Software-Engineer--Engineering-Development-Program-2027-_REQ-22180",
+      "urgent": false,
+      "note": "Pella IA, applications close November 30 2026"
+    },
+    {
+      "role": "Software Engineer",
+      "company": "Two Six Technologies",
+      "posted": "2026-09-03",
+      "link": "https://job-boards.greenhouse.io/twosixtechnologies/jobs/6179900004",
+      "urgent": false,
+      "note": "Ellicott City MD, DoD clearance eligibility, citizenship advantage"
+    },
+    {
+      "role": "Software Developer New Grad, Engagement Optimization",
+      "company": "Johns Hopkins APL",
+      "posted": "2026-09-02",
+      "link": "https://careers.jhuapl.edu/jobs/59510",
+      "urgent": false,
+      "note": "Laurel MD, needs interim Secret eligibility by start date"
+    },
+    {
+      "role": "Entry Level Software Engineer",
+      "company": "General Motors",
+      "posted": "2026-09-01",
+      "link": "https://generalmotors.wd5.myworkdayjobs.com/en-US/Careers_GM/job/Warren-Michigan-United-States-of-America/Entry-Level-Software-Engineer_JR-202618756",
+      "urgent": false,
+      "note": "Warren MI, grads Dec 2026 through Aug 2027"
+    },
+    {
+      "role": "Tech Accelerate Graduate Program - Software Engineer (June)",
+      "company": "RELX",
+      "posted": "2026-08-31",
+      "link": "https://relx.wd3.myworkdayjobs.com/relx/job/Boca-Raton-FL/Tech-Accelerate-Graduate-Program---Software-Engineer--Boca-Raton---June-_R116023",
+      "urgent": false,
+      "note": "Boca Raton FL, new or upcoming graduate, entry level"
+    },
+    {
+      "role": "New College Grad - Embedded Firmware Engineer",
+      "company": "Micron",
+      "posted": "2026-09-03",
+      "link": "https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---SIG-Building/New-College-Grad---Embedded-Firmware-Engineer_JR109306",
+      "urgent": false,
+      "note": "Boise ID, BSEE or BSCE, no experience floor"
+    },
+    {
+      "role": "Software Engineer I",
+      "company": "Chewy",
+      "posted": "2026-09-01",
+      "link": "https://wd5.myworkdaysite.com/recruiting/chewy/External/job/Bellevue-WA/Software-Engineer-I_R30695-1",
+      "urgent": false,
+      "note": "Bellevue WA and Boston MA, Bachelor's, no experience floor"
+    },
+    {
+      "role": "Software Engineer I",
+      "company": "Zebra Technologies",
+      "posted": "2026-09-03",
+      "link": "https://zebra.wd501.myworkdayjobs.com/Zebra_careers/job/Holtsville-New-York/Software-Engineer-I_JR103056",
+      "urgent": false,
+      "note": "Holtsville NY, Bachelor's required, no experience floor"
+    },
+    {
+      "role": "Software Engineer I",
+      "company": "Boston Scientific",
+      "posted": "2026-09-03",
+      "link": "https://bostonscientific.eightfold.ai/careers/job/563602813508995",
+      "urgent": false,
+      "note": "Arden Hills MN, pursuing Bachelor's in Computer Engineering"
+    }
+  ],
+  "hardware": [
+    {
+      "role": "New College Grad - Mixed Signal Design Engineer, HBM",
+      "company": "Micron",
+      "posted": "2026-09-03",
+      "link": "https://micron.wd1.myworkdayjobs.com/en-US/External/job/Richardson-TX/New-College-Grad---Mixed-Signal-Design-Engineer--HBM_JR110753",
+      "urgent": false,
+      "note": "Richardson TX, Bachelor's or Master's, no experience floor"
+    },
+    {
+      "role": "New College Grad - Design Engineer, Circuit Design",
+      "company": "Micron",
+      "posted": "2026-09-03",
+      "link": "https://micron.wd1.myworkdayjobs.com/en-US/External/job/San-Jose-CA/Staff-Engineer--Circuit-Design_JR94667",
+      "urgent": false,
+      "note": "San Jose CA, slug says Staff, rendered title is NCG"
+    },
+    {
+      "role": "New College Grad - Design Engineer, DRAM Technology and Products",
+      "company": "Micron",
+      "posted": "2026-09-02",
+      "link": "https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/New-College-Grad---Design-Engineer--DRAM-Technology-and-Products_JR105519",
+      "urgent": false,
+      "note": "Boise ID, BSEE or higher, design flow optimization"
+    },
+    {
+      "role": "New College Grad - Design Readiness Engineer",
+      "company": "Micron",
+      "posted": "2026-08-31",
+      "link": "https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/New-College-Grad---Design-Readiness-Engineer_JR106372",
+      "urgent": false,
+      "note": "Boise ID, Bachelor's in EE or CE"
+    },
+    {
+      "role": "Electrical (FPGA) Engineer I (Onsite)",
+      "company": "RTX",
+      "posted": "2026-08-31",
+      "link": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-FL-MELBOURNE-313--1344-S-Babcock-St--BLDG-313/Electrical--FPGA--Engineer-1--Onsite-_01862925",
+      "urgent": false,
+      "note": "Melbourne FL, clearance status field reads Not Required"
+    }
+  ],
+  "needsCheck": [
+    {
+      "company": "Roblox",
+      "title": "2027 Roblox Rising Builders hub",
+      "link": "https://2027robloxrisingbuilders.splashthat.com/",
+      "note": "Sept 17 session listed with no year, child page not found"
+    },
+    {
+      "company": "Meta",
+      "title": "Career Programs Virtual Learning Series 2026",
+      "link": "https://events.atmeta.com/metacareerprogramsvirtuallearningseries20261/agenda",
+      "note": "all six sessions completed, last Aug 7 2026, watch for next wave"
+    },
+    {
+      "company": "Micron",
+      "title": "FY26 ETCH - Inside Micron and the Semiconductor Industry",
+      "link": "https://micron.eightfold.ai/events/candidate?plannedEventId=jzKZ2j07",
+      "note": "Feb 5 2026, marked past, no FY27 page published yet"
+    },
+    {
+      "company": "Northrop Grumman",
+      "title": "Fall Info Sessions for University Students",
+      "link": "https://jobs.northropgrumman.com/events/candidate?plannedEventId=lZBe4Zrqk&domain=ngc.com",
+      "note": "Oct 28 2025 page still shows Register, prior-year trap"
+    },
+    {
+      "company": "Qualcomm",
+      "title": "Workday tenant qualcomm.wd5 unreachable",
+      "link": "https://qualcomm.wd5.myworkdayjobs.com/External",
+      "note": "Workday maintenance page this run, resweep next run"
+    },
+    {
+      "company": "AMD",
+      "title": "Workday tenant amd.wd1 unreachable",
+      "link": "https://amd.wd1.myworkdayjobs.com/External",
+      "note": "Workday maintenance page this run, resweep next run"
+    }
+  ]
 }
