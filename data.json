@@ -1,17 +1,147 @@
 {
-  "run": "2026.09.14",
-  "generated": "2026-09-14T00:00:00Z",
+  "run": "2026.09.21",
+  "generated": "2026-09-21T23:55:00Z",
   "events": [],
   "software": [
-    { "role": "Career Accelerator Program - Software Engineer", "company": "Texas Instruments", "posted": "2026-09-09", "link": "https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25017860", "urgent": true, "note": "Dallas TX, apply before Sept 16, Bachelor's, no citizenship bar" },
-    { "role": "Software Engineer - New Grad, 2027", "company": "Domino Data Lab", "posted": "2026-09-09", "link": "https://app.careerpuck.com/job-board/domino-data-lab/job/7992556", "urgent": false, "note": "NYC or Remote US, Spring 2027 grads, $150-165k" },
-    { "role": "Software Engineer - New Grad (2027)", "company": "Replit", "posted": "2026-09-09", "link": "https://jobs.ashbyhq.com/replit/b5e81eae-06f9-4798-8988-2d06ca936dbc", "urgent": false, "note": "Foster City CA, no experience floor stated" },
-    { "role": "Software Engineer, Early Career 2027", "company": "Commure", "posted": "2026-09-11", "link": "https://jobs.ashbyhq.com/commure/c6a735ef-3d84-4447-94a9-9e8b2dfefced", "urgent": false, "note": "Mountain View CA, Bachelor's or Master's accepted" },
-    { "role": "Software Engineer, Early Careers, AI and UI", "company": "Roku", "posted": "2026-09-11", "link": "https://www.weareroku.com/jobs/software-engineer-early-careers-focused-on-ai-and-ui-san-jose-california-united-states", "urgent": false, "note": "San Jose CA, experience capped not floored" },
-    { "role": "Software Engineer", "company": "Microsoft", "posted": "2026-09-09", "link": "https://apply.careers.microsoft.com/careers/job/1970393556988778", "urgent": false, "note": "Redmond WA, Bachelor's path has no experience floor" }
+    {
+      "role": "2027 Software Engineer New College Grad (Bachelor's)",
+      "company": "Applied Materials",
+      "posted": "2026-09-20",
+      "link": "https://amat.wd1.myworkdayjobs.com/External/job/GloucesterMA/XMLNAME-2027-Software-Engineer-New-College-Grad--Bachelor-s----Gloucester--MA_R2625914",
+      "urgent": false,
+      "note": "Gloucester MA, Bachelor's, explicitly 2027 grads"
+    },
+    {
+      "role": "Software Engineer, New College Grad - 2027",
+      "company": "Visa",
+      "posted": "2026-09-17",
+      "link": "https://visa.wd5.myworkdayjobs.com/Visa/job/US---Austin-TX/Software-Engineer--New-College-Grad---2027--Austin--TX_REF088586W",
+      "urgent": false,
+      "note": "Austin TX, graduating May 2026 to Aug 2027"
+    },
+    {
+      "role": "Software Engineer, New College Grad - 2027",
+      "company": "Visa",
+      "posted": "2026-09-17",
+      "link": "https://visa.wd5.myworkdayjobs.com/Visa/job/US---Foster-City-CA/Software-Engineer--New-College-Grad---2027-Foster-City--CA_REF088543W-1",
+      "urgent": false,
+      "note": "Foster City CA, same 2027 window as Austin req"
+    },
+    {
+      "role": "Software Engineer, New Grad (2027)",
+      "company": "Together AI",
+      "posted": "2026-09-18",
+      "link": "https://job-boards.greenhouse.io/togetherai/jobs/5211582007",
+      "urgent": false,
+      "note": "San Francisco onsite, degree by Summer 2027"
+    },
+    {
+      "role": "Software Engineer - New Grad 2027",
+      "company": "SingleStore",
+      "posted": "2026-09-15",
+      "link": "https://job-boards.greenhouse.io/singlestore/jobs/8205427",
+      "urgent": false,
+      "note": "US, BS degree, C/C++ systems work"
+    },
+    {
+      "role": "2027 New Graduate - Software Engineer",
+      "company": "Radiant Industries",
+      "posted": "2026-09-17",
+      "link": "https://jobs.ashbyhq.com/radiant-industries/1ec29cec-d18f-417d-adc6-31adda87c687",
+      "urgent": false,
+      "note": "El Segundo CA, Fall 2026 or Spring 2027 grads"
+    },
+    {
+      "role": "Flight Software Engineer I",
+      "company": "Rocket Lab",
+      "posted": "2026-09-14",
+      "link": "https://job-boards.greenhouse.io/rocketlab/jobs/7992129003",
+      "urgent": false,
+      "note": "Littleton CO, US citizenship required, advantage"
+    },
+    {
+      "role": "Associate Embedded Software Engineer",
+      "company": "Analog Devices",
+      "posted": "2026-09-15",
+      "link": "https://analogdevices.wd1.myworkdayjobs.com/External/job/US-MA-Wilmington/Associate-Embedded-Software-Engineer_R266131",
+      "urgent": false,
+      "note": "Wilmington MA and San Jose CA, 0-2 years"
+    },
+    {
+      "role": "Software Engineer (New Grad)",
+      "company": "Miter",
+      "posted": "2026-09-14",
+      "link": "https://jobs.ashbyhq.com/miter/f4567649-a0eb-445d-bd00-a0673a26ec6d",
+      "urgent": false,
+      "note": "New York City, 0-1 years experience"
+    },
+    {
+      "role": "Software Engineer - New graduate",
+      "company": "Meow",
+      "posted": "2026-09-17",
+      "link": "https://jobs.ashbyhq.com/meow/56e3b840-11a0-4e98-baca-44e8e26b5218",
+      "urgent": false,
+      "note": "NYC, citizenship or PR required, advantage"
+    },
+    {
+      "role": "Graduate Software Engineer",
+      "company": "Coram AI",
+      "posted": "2026-09-15",
+      "link": "https://jobs.ashbyhq.com/coram-ai/3fa08156-569d-4a69-a918-53e5074dd3a3",
+      "urgent": false,
+      "note": "Sunnyvale CA, no years floor, no advanced degree"
+    }
   ],
-  "hardware": [],
+  "hardware": [
+    {
+      "role": "New College Grad - Engineer, ASIC Digital Design",
+      "company": "Micron",
+      "posted": "2026-09-17",
+      "link": "https://micron.wd1.myworkdayjobs.com/External/job/Minneapolis-MN/New-College-Grad---Engineer--ASIC-Digital-Design_JR112164",
+      "urgent": false,
+      "note": "Minneapolis MN, 0-2 years, Bachelor's fine"
+    },
+    {
+      "role": "RTL Design Engineer",
+      "company": "Intel",
+      "posted": "2026-09-14",
+      "link": "https://intel.wd1.myworkdayjobs.com/External/job/US-Texas-Austin/RTL-Design-Engineer_JR0287272",
+      "urgent": false,
+      "note": "Austin TX, 3+ months, coursework counts"
+    }
+  ],
   "needsCheck": [
-    { "role": "2027 Rising Builders series hub", "company": "Roblox", "posted": "", "link": "https://2026robloxrisingbuilders.splashthat.com/", "urgent": false, "note": "Sept 17 and Sept 24 sessions listed with no year attached" }
+    {
+      "company": "Roblox",
+      "title": "2027 Rising Builders hub",
+      "date": "",
+      "link": "https://2027robloxrisingbuilders.splashthat.com/",
+      "urgent": false,
+      "note": "Sept 24 session listed, still no year on page"
+    },
+    {
+      "company": "Meta",
+      "title": "Career Programs Virtual Learning Series 2026",
+      "date": "",
+      "link": "https://events.atmeta.com/metacareerprogramsvirtuallearningseries20261/agenda",
+      "urgent": false,
+      "note": "May 2026 wave, no fall successor dated"
+    },
+    {
+      "company": "Lockheed Martin",
+      "title": "Discover Lockheed Martin Fall 2026 Back to School Kickoff",
+      "date": "",
+      "link": "https://lockheedmartin.recsolu.com/app/collect/event/V4-h4S7La9ABHklOJn3ftw",
+      "urgent": false,
+      "note": "Fall dates seen on campus calendars only"
+    },
+    {
+      "company": "Micron",
+      "title": "ETCH webinar series",
+      "date": "",
+      "link": "https://micron.eightfold.ai/events/candidate?plannedEventId=jzK04A0P",
+      "urgent": false,
+      "note": "Aug 21 2026 session past, no next session dated"
+    }
   ]
 }
