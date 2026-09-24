@@ -1,155 +1,55 @@
 {
-  "run": "2026.09.22",
-  "generated": "2026-09-22T15:10:00Z",
+  "run": "2026.09.24",
+  "generated": "2026-09-24T21:04:00Z",
   "events": [],
   "software": [
-    {
-      "role": "Career Accelerator Program - Software Engineer",
-      "company": "Texas Instruments",
-      "posted": "2026-09-09",
-      "link": "https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25017577/",
-      "urgent": false,
-      "note": "Dallas TX +1, TI new grad program, not page-verified"
-    },
-    {
-      "role": "Software Engineer, New College Grad, Bellevue - 2027",
-      "company": "Visa",
-      "posted": "2026-09-17",
-      "link": "https://visa.wd5.myworkdayjobs.com/visa/job/US---Bellevue-WA/Software-Engineer--New-College-Grad--Bellevue---2027_REF088530W-3",
-      "urgent": false,
-      "note": "Bellevue WA, explicit 2027 class year, not page-verified"
-    },
-    {
-      "role": "Software Engineer: AI Experiences Search",
-      "company": "Microsoft",
-      "posted": "2026-09-18",
-      "link": "https://apply.careers.microsoft.com/careers/job/1970393556986144",
-      "urgent": false,
-      "note": "Redmond WA, not page-verified"
-    },
-    {
-      "role": "Software Engineer",
-      "company": "Microsoft",
-      "posted": "2026-09-17",
-      "link": "https://apply.careers.microsoft.com/careers/job/1970393556928331",
-      "urgent": false,
-      "note": "US, not page-verified"
-    },
-    {
-      "role": "Software Engineer I",
-      "company": "PROS",
-      "posted": "2026-09-18",
-      "link": "https://pros.wd5.myworkdayjobs.com/pros_careers/job/USA-TX-Houston-Office/Software-Engineer-I_R3608",
-      "urgent": false,
-      "note": "Houston TX, local to Rice, not page-verified"
-    },
-    {
-      "role": "Software Engineer I",
-      "company": "Silicon Labs",
-      "posted": "2026-09-14",
-      "link": "https://silabs.wd1.myworkdayjobs.com/siliconlabscareers/job/Austin/Software-Engineer-I_21011-1",
-      "urgent": false,
-      "note": "Austin TX, embedded semiconductor, not page-verified"
-    },
-    {
-      "role": "Software Engineer (Early Career Professional)",
-      "company": "Toyota",
-      "posted": "2026-09-18",
-      "link": "https://toyota.wd503.myworkdayjobs.com/tmna/job/Plano-Texas/Software-Engineer--Early-Career-Professional-_10325071",
-      "urgent": false,
-      "note": "Plano TX, not page-verified"
-    },
-    {
-      "role": "Software Engineer New Grad - Helios",
-      "company": "SingleStore",
-      "posted": "2026-09-22",
-      "link": "https://job-boards.greenhouse.io/singlestore/jobs/8220882",
-      "urgent": false,
-      "note": "United States, posted today, not page-verified"
-    },
-    {
-      "role": "Software Engineer New Grad - Engine",
-      "company": "SingleStore",
-      "posted": "2026-09-22",
-      "link": "https://job-boards.greenhouse.io/singlestore/jobs/8220863",
-      "urgent": false,
-      "note": "United States, posted today, not page-verified"
-    },
-    {
-      "role": "Embedded Software Engineer I",
-      "company": "RTX",
-      "posted": "2026-09-21",
-      "link": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-IA-CEDAR-RAPIDS-137--855-35Th-St-NE--BLDG-137/Embedded-Software-Engineer-I--Onsite-_01872627",
-      "urgent": false,
-      "note": "Cedar Rapids IA, citizenship an advantage, not page-verified"
-    },
-    {
-      "role": "Embedded Software Engineer I - Product Development",
-      "company": "Johnson Controls",
-      "posted": "2026-09-18",
-      "link": "https://jci.wd5.myworkdayjobs.com/jci/job/New-Freedom-Pennsylvania-United-States-of-America/Embedded-Software-Engineer-I---Product-Development_WD30272369",
-      "urgent": false,
-      "note": "New Freedom PA, not page-verified"
-    },
-    {
-      "role": "Systems / Software Engineer I Graduate",
-      "company": "HPE",
-      "posted": "2026-09-21",
-      "link": "https://hpe.wd5.myworkdayjobs.com/jobsathpe/job/Roseville-California-United-States-of-America/Systems---Software-Engineer-I-Graduate_1214984",
-      "urgent": false,
-      "note": "Roseville CA, systems software, not page-verified"
-    },
-    {
-      "role": "Associate Software Engineer",
-      "company": "Schweitzer Engineering Laboratories",
-      "posted": "2026-09-14",
-      "link": "https://selinc.wd1.myworkdayjobs.com/sel/job/Washington---Pullman/Associate-Software-Engineer_2026-22492-1",
-      "urgent": false,
-      "note": "Pullman WA, power systems, not page-verified"
-    }
+    { "role": "2027 Early Career Firmware Engineer", "company": "Anduril", "posted": "2026-09-22", "link": "https://boards.greenhouse.io/andurilindustries/jobs/5246141007", "urgent": false, "note": "Costa Mesa CA, explicit 2027 req, no experience floor" },
+    { "role": "Firmware Engineer, HID Bluetooth", "company": "Apple", "posted": "2026-09-21", "link": "https://jobs.apple.com/en-us/details/200684986/firmware-engineer-hid-bluetooth", "urgent": false, "note": "Cupertino CA, BS and 0 to 3 years" },
+    { "role": "Software Engineer, Public Sector - New Grad", "company": "Scale AI", "posted": "2026-09-23", "link": "https://job-boards.greenhouse.io/scaleai/jobs/4736426005", "urgent": false, "note": "San Francisco, Spring 2027 grads eligible, citizenship an advantage" },
+    { "role": "Software Engineer - New Grad", "company": "ZipRecruiter", "posted": "2026-09-24", "link": "https://job-boards.greenhouse.io/ziprecruiter/jobs/8127108", "urgent": false, "note": "Santa Monica CA, 2027 grads explicitly listed" },
+    { "role": "Software Engineer - New Grad", "company": "SeatGeek", "posted": "2026-09-23", "link": "https://seatgeek.com/jobs/8227548?gh_jid=8227548", "urgent": false, "note": "New York City, targets 2027 college graduates" },
+    { "role": "Software Engineer, Compiler I", "company": "Cisco", "posted": "2026-09-22", "link": "https://cisco.wd5.myworkdayjobs.com/cisco_careers/job/Austin-Texas-US/Software-Engineer-Complier-I--Full-Time----United-States_2025313", "urgent": true, "note": "Austin TX, bachelor's with 0 years, closes Sept 30" },
+    { "role": "Graduate Firmware Engineer", "company": "Graphcore", "posted": "2026-09-23", "link": "https://job-boards.greenhouse.io/graphcore/jobs/8841995002", "urgent": false, "note": "Austin TX, 2027 graduates, no experience floor" },
+    { "role": "2027 Associate Embedded Software Engineer, Pathways", "company": "Northrop Grumman", "posted": "2026-09-21", "link": "https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Maryland-Baltimore/XMLNAME-2027-Associate-Embedded-Software-Engineer---Pathways-Program---Baltimore-MD_R10250982", "urgent": true, "note": "Baltimore MD, Secret needed by start, closes Sept 25" },
+    { "role": "2027 Embedded Software Engineer, Pathways", "company": "Northrop Grumman", "posted": "2026-09-21", "link": "https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Maryland-Baltimore/XMLNAME-2027-Embedded-Software-Engineer---Pathways-Program---Baltimore-MD_R10251459", "urgent": true, "note": "Baltimore MD, Secret needed by start, closes Sept 25" },
+    { "role": "New Grad Software Engineer", "company": "Authentic", "posted": "2026-09-23", "link": "https://job-boards.greenhouse.io/authenticinsurance/jobs/4114318009", "urgent": false, "note": "New York City, evergreen req refreshed Sept 23" },
+    { "role": "Associate Software Engineer", "company": "Toshiba Global Commerce", "posted": "2026-09-23", "link": "https://job-boards.greenhouse.io/toshibaglobalcommercesolutions/jobs/5247010007", "urgent": false, "note": "Durham NC, no experience floor or class-year limit" },
+    { "role": "2027 University Graduate - Software Engineer", "company": "Adobe", "posted": "2026-09-24", "link": "https://adobe.wd5.myworkdayjobs.com/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Software-Engineer_R172083", "urgent": false, "note": "San Jose CA, Dec 2026 to June 2027 grads, 0-1 years" },
+    { "role": "Software Development Engineer I, Annapurna Labs, Early Career 2027", "company": "Amazon", "posted": "2026-09-24", "link": "https://www.amazon.jobs/en/jobs/10558915/software-development-engineer-i-annapurna-labs-early-career-2027", "urgent": false, "note": "Cupertino CA, requires graduation May 2027 or later" },
+    { "role": "Junior Firmware Engineer", "company": "Lattice Semiconductor", "posted": "2026-09-22", "link": "https://latticesemi.wd5.myworkdayjobs.com/latticesemiconductorscareers/job/Duluth-Georgia/Junior-Firmware-Engineer_R-103111", "urgent": false, "note": "Duluth GA, entry level or fresh graduate" },
+    { "role": "Associate Software Engineer - Direct College Hire", "company": "Southwest Airlines", "posted": "2026-09-22", "link": "https://swa.wd1.myworkdayjobs.com/external/job/TX-Dallas/Associate-Software-Engineer---Direct-College-Hire_R-2026-72886", "urgent": false, "note": "Dallas TX, cohorts start Jan, June or Aug 2027" },
+    { "role": "Associate Software Engineer", "company": "Boeing", "posted": "2026-09-22", "link": "https://boeing.wd1.myworkdayjobs.com/external_subsidiary/job/USA---Maryland-Heights-MO/Associate-Software-Engineer_JR2026516706", "urgent": false, "note": "Maryland Heights MO, US Person required, coursework-level experience" },
+    { "role": "Tech Accelerate Graduate Program (Software)", "company": "LexisNexis Risk Solutions", "posted": "2026-09-23", "link": "https://relx.wd3.myworkdayjobs.com/en-US/relx/job/Alpharetta-GA/Tech-Accelarate-Graduate-Program_R118810-1", "urgent": false, "note": "Alpharetta GA, new or upcoming graduates" },
+    { "role": "Entry Level Software Engineer", "company": "Cox", "posted": "2026-09-21", "link": "https://cox.wd1.myworkdayjobs.com/Cox_External_Career_Site_1/job/Atlanta-GA/Entry-Level-Software-Engineer---Atlanta--GA_R202682766", "urgent": false, "note": "Atlanta GA, OOP experience via schoolwork counts" },
+    { "role": "Software Engineer I (Onsite)", "company": "RTX", "posted": "2026-09-23", "link": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-MA-TEWKSBURY-TB3--50-Apple-Hill-Dr--CONCORD-BLDG-Tewksbury-Tb3-300-Concord/Software-Engineer-I--Onsite-_01873302", "urgent": false, "note": "Tewksbury MA, US citizen, needs interim Secret eligibility" },
+    { "role": "Software Engineer I (Onsite)", "company": "RTX", "posted": "2026-09-24", "link": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-MA-MARLBOROUGH-MA2--1001-Boston-Post-Rd--BLDG-2/Software-Engineer-I--Onsite-_01877495", "urgent": false, "note": "Marlborough MA, US citizen, needs interim Secret eligibility" },
+    { "role": "Software Engineer I (Onsite)", "company": "RTX", "posted": "2026-09-24", "link": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-MA-WOBURN-WB1--235-Presidential-Way--SPENCER-BLDG/Software-Engineer-I_01875564", "urgent": false, "note": "Woburn MA, US citizen, needs interim Secret eligibility" },
+    { "role": "HWIL Software Engineer I", "company": "RTX", "posted": "2026-09-24", "link": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-AZ-TUCSON-805--1151-E-Hermans-Rd--BLDG-805/HWIL-Software-Engineer-I_01874565", "urgent": false, "note": "Tucson AZ, 12 months or less, interim Secret eligibility" },
+    { "role": "Software Engineer I - Test", "company": "RTX", "posted": "2026-09-21", "link": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-AZ-TUCSON-805--1151-E-Hermans-Rd--BLDG-805/Software-Engineer-I---Test_01873961", "urgent": false, "note": "Tucson AZ, US citizen, needs interim Secret eligibility" },
+    { "role": "Software Engineer I (Onsite)", "company": "RTX", "posted": "2026-09-21", "link": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-IN-FT-WAYNE-150A--1010-Production-Rd--BLDG-150A/Software-Engineer-I---Onsite-_01868599", "urgent": false, "note": "Fort Wayne IN, US citizen, needs interim Secret eligibility" },
+    { "role": "Jr Software Developer", "company": "Leidos", "posted": "2026-09-24", "link": "https://leidos.wd5.myworkdayjobs.com/external/job/Gaithersburg-MD/Jr-Software-Developer_R-00193045", "urgent": false, "note": "Gaithersburg MD, under 2 years, Public Trust obtainable" },
+    { "role": "Software Engineer I", "company": "Leidos", "posted": "2026-09-17", "link": "https://leidos.wd5.myworkdayjobs.com/external/job/San-Diego-CA/Software-Engineer_R-00192469", "urgent": false, "note": "San Diego CA, US citizen, Secret or ability to obtain" },
+    { "role": "Software Development Engineer, New Grad", "company": "Qumulo", "posted": "2026-09-24", "link": "https://jobs.ashbyhq.com/qumulo/e1cebc33-3bfc-4c86-9581-4d558cd5f8cc/application?embed=true", "urgent": false, "note": "Seattle hybrid, graduating within 9 months qualifies" },
+    { "role": "Software Engineer I", "company": "TeleTracking", "posted": "2026-09-21", "link": "https://job-boards.greenhouse.io/teletrackingtechnologiesinc/jobs/5425154008", "urgent": false, "note": "Pittsburgh PA, 0-2 years" },
+    { "role": "Software Engineer I", "company": "Honeywell", "posted": "2026-09-23", "link": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Honeywell/job/157648", "urgent": false, "note": "Duluth GA, window about 40 days from posting" },
+    { "role": "Associate Software Engineer", "company": "FiscalNote", "posted": "2026-09-21", "link": "https://jobs.lever.co/fiscalnote/c76e748f-6e25-42cf-bf26-ebae44280ffd", "urgent": false, "note": "US remote, 0-1 years" }
   ],
   "hardware": [
-    {
-      "role": "Post-Silicon Validation Engineer New Grad - Mixed Signal IC",
-      "company": "Cirrus Logic",
-      "posted": "2026-09-22",
-      "link": "https://jobs.eu.lever.co/cirrus/b4334931-aee2-40d9-a82e-ae6fb644cab0",
-      "urgent": false,
-      "note": "Austin TX, explicit new grad req, not page-verified"
-    },
-    {
-      "role": "ASIC Verification Engineer",
-      "company": "NVIDIA",
-      "posted": "2026-09-21",
-      "link": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/ASIC-Verification-Engineer_JR2022280",
-      "urgent": false,
-      "note": "Santa Clara CA, YoE floor unchecked, not page-verified"
-    },
-    {
-      "role": "New College Grad - Design Engineer",
-      "company": "Micron",
-      "posted": "2026-09-18",
-      "link": "https://micron.wd1.myworkdayjobs.com/en-US/External/job/San-Jose-CA/Senior-Design-Engineer_JR105872",
-      "urgent": false,
-      "note": "San Jose CA, slug says Senior but title is NCG, not page-verified"
-    },
-    {
-      "role": "SoC Power and Performance Engineer",
-      "company": "Intel",
-      "posted": "2026-09-21",
-      "link": "https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Santa-Clara/SoC-Power-and-Performance-Engineer_JR0281255",
-      "urgent": false,
-      "note": "Santa Clara CA, YoE floor unchecked, not page-verified"
-    }
+    { "role": "New College Grad - Engineer, ASIC Digital Design", "company": "Micron", "posted": "2026-09-17", "link": "https://micron.wd1.myworkdayjobs.com/External/job/Minneapolis-MN/New-College-Grad---Engineer--ASIC-Digital-Design_JR112164", "urgent": false, "note": "Minneapolis MN, bachelor's accepted, 0-2 years via internships" },
+    { "role": "New College Grad - Design Engineer, DEG Design Method", "company": "Micron", "posted": "2026-09-23", "link": "https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---Main-Site/Sr-Design-Engineer--DEG-Design-Method_JR104060", "urgent": false, "note": "Boise ID, new college grad req despite senior slug" },
+    { "role": "New College Grad - Design Engineer", "company": "Micron", "posted": "2026-09-18", "link": "https://micron.wd1.myworkdayjobs.com/External/job/San-Jose-CA/Senior-Design-Engineer_JR105872", "urgent": false, "note": "San Jose CA, bachelor's accepted, master's only preferred" },
+    { "role": "ASIC Verification Engineer, GPU", "company": "NVIDIA", "posted": "2026-09-23", "link": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/ASIC-Verification-Engineer---GPU_JR2019813", "urgent": false, "note": "Santa Clara CA, bachelor's in EE, no years stated" },
+    { "role": "Associate FPGA Engineer", "company": "Moog", "posted": "2026-09-21", "link": "https://moog.wd5.myworkdayjobs.com/moog_external_career_site/job/Buffalo-NY/Associate-FPGA-Engineer_R-26-17419", "urgent": false, "note": "Buffalo NY, BSEE, clearance eligibility likely, citizenship an advantage" },
+    { "role": "Electrical/Hardware Engineer I", "company": "HPE", "posted": "2026-09-22", "link": "https://hpe.wd5.myworkdayjobs.com/acjobsite/job/Spring-Texas-United-States-of-America/Electrical-Hardware-Engineer-I_1213860", "urgent": false, "note": "Spring TX, bachelor's accepted, typically 0-2 years" },
+    { "role": "Platform System/Hardware Engineer, Customer Solutions Engineering", "company": "HPE", "posted": "2026-09-22", "link": "https://hpe.wd5.myworkdayjobs.com/acjobsite/job/Spring-Texas-United-States-of-America/Platform-System-Hardware-Engineer---Customer-Solutions-Engineering_1213922", "urgent": false, "note": "Spring TX, typically 0-4 years, onsite five days" },
+    { "role": "Associate Design Evaluation Engineer", "company": "Analog Devices", "posted": "2026-09-15", "link": "https://analogdevices.wd1.myworkdayjobs.com/External/job/US-NJ-Somerset/Associate-Design-Evaluation-Engineer_R266124", "urgent": false, "note": "Somerset NJ, 0-2 years, new grads welcome" }
   ],
   "needsCheck": [
-    {
-      "company": "Roblox",
-      "title": "Rising Builders Series (hub retitled 2027)",
-      "date": "",
-      "link": "https://2026robloxrisingbuilders.splashthat.com/",
-      "urgent": false,
-      "note": "Hub says 2027 but header still Sept 2025; one session dated Sept 24 with no year"
-    }
+    { "company": "Micron", "title": "ETCH Early Talent Career Huddles", "date": "", "link": "https://micron.eightfold.ai/events/open?domain=micron.com", "urgent": false, "note": "Sessions Feb, Aug, Sept 2026 all passed, next undated" },
+    { "company": "Roblox", "title": "Rising Builders 2027", "date": "", "link": "https://2027robloxrisingbuilders.splashthat.com/", "urgent": false, "note": "Template shell, Date TBD, stale 2025 date left in place" },
+    { "company": "Roblox", "title": "Rising Builders, Building with AI", "date": "", "link": "https://2026risingbuildersbuildingaifo.splashthat.com/", "urgent": false, "note": "Says Date TBD throughout, next session has no year" },
+    { "company": "Meta", "title": "Career Programs Virtual Learning Series", "date": "", "link": "https://events.atmeta.com/metacareerprogramsvirtuallearningseries20261/agenda", "urgent": false, "note": "May and Aug 2026 waves confirmed and passed, none dated ahead" },
+    { "company": "Lockheed Martin", "title": "Discover Lockheed Martin, Back-to-School Kickoff", "date": "", "link": "https://connections.villanova.edu/blog/2026/07/29/join-lockheed-martin-in-their-virtual-kickoff-series/", "urgent": false, "note": "Aug 2026 series via university repost, no company registration page reached" },
+    { "company": "Northrop Grumman", "title": "Fall Virtual Information Sessions", "date": "", "link": "https://ngc.eightfold.ai/events/open?domain=ngc.com", "urgent": false, "note": "Sept 22 2026 Utah session passed, no next general session dated" }
   ]
 }
